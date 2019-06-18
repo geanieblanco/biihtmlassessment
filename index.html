@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <style type="text/css">
+    /* GLOBAL CSS */
+    body {
+      Margin: 0 !important;
+      padding: 15px;
+      background-color: #FFF;
+      color: black;
+      text-align: center;
+    }
+
+    .wrapper {
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    .wrapper-inner {
+      width: 100%;
+      max-width: 670px;
+      Margin: 0 auto;
+    }
+
+    table {
+      border-spacing: 0;
+      font-family: 'Nunito', Helvetica, sans-serif;
+
+    }
+
+    td {
+      padding: 0;
+    }
+
+    p {
+      Margin: 0;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    .sub-td {
+      padding: 10px;
+    }
+
+    img {
+      border: 0;
+    }
+
+    .section {
+      width: 100%;
+      max-width: 200px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .content {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    img {
+      width: 30%;
+      max-width: 125px;
+      height: auto;
+    }
+
+
+    /* HERO */
+    .hero {
+      width: 100%;
+      max-width: 670px;
+      margin: 0 auto;
+      padding: 15px;
+      background: rgba(27, 43, 66, 1);
+      background: -moz-linear-gradient(top, rgba(27, 43, 66, 1) 0%, rgba(37, 57, 89, 1) 33%, rgba(52, 78, 126, 1) 63);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(27, 43, 66, 1)), color-stop(33%, rgba(37, 57, 89, 1)), color-stop(63%, rgba(52, 78, 126, 1)));
+      background: -webkit-linear-gradient(top, rgba(27, 43, 66, 1) 0%, rgba(37, 57, 89, 1) 33%, rgba(52, 78, 126, 1) 63);
+      background: -o-linear-gradient(top, rgba(27, 43, 66, 1) 0%, rgba(37, 57, 89, 1) 33%, rgba(52, 78, 126, 1) 63);
+      background: -ms-linear-gradient(top, rgba(27, 43, 66, 1) 0%, rgba(37, 57, 89, 1) 33%, rgba(52, 78, 126, 1) 63);
+      background: linear-gradient(to bottom, rgba(27, 43, 66, 1) 0%, rgba(37, 57, 89, 1) 33%, rgba(52, 78, 126, 1) 63);
+      color: white;
+    }
+
+    img.logo {
+      max-width: 200px !important;
+    }
+
+    /* GRAPHIC + COPY */
+    .intro img {
+      width: 100%;
+      height: auto;
+    }
+
+    .intro .section {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .intro .sub-td {
+      font-size: 16px;
+      line-height: 20px;
+      text-align: left;
+    }
+
+    /* CALL TO ACTION */
+    .callToAction {
+      text-align: center;
+      font-size: 0;
+      padding: 5px 0 10px 0;
+      /* margin-top: 40px; */
+    }
+
+    .callToAction .section {
+      width: 100%;
+      max-width: 300px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .callToAction .content {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    .content {
+      width: 100%;
+      padding-top: 20px;
+    }
+
+    .callToAction img {
+      width: 20%;
+      max-width: 280px;
+      height: auto;
+    }
+
+    .callToAction .text {
+      padding: 10px 0;
+      border: 2px solid #000000;
+    }
+
+    /*  */
+
+    .mainTable {
+      width: 100%;
+      max-width: 610px;
+      margin: 0 auto;
+    }
+
+    p.center {
+      text-align: center;
+      max-width: 580px;
+      line-height: 24px;
+    }
+
+    .box {
+      background-color: #F1F1F1;
+      font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    }
+
+    .box h1 {
+      margin-top: 10px;
+    }
+
+    .grayBox {
+      width: 100%;
+      max-width: 670px;
+      margin: 22px auto;
+    }
+
+    .gb-column {
+      text-align: center;
+      font-size: 0;
+      padding: 10px 0 30px 0;
+    }
+
+
+    .grayBox p {
+      margin-top: 6px;
+      font-size: 12;
+      line-height: 23px;
+    }
+
+    .bottomTable {
+      width: 100%;
+      max-width: 670px;
+      margin: 22px auto;
+      background-color: #E3E3E3;
+    }
+
+    .h1 {
+      text-align: center !important;
+      font-size: 25px !important;
+      font-weight: 600;
+      line-height: 45px;
+      Margin: 12px 0 20px 0;
+      color: #4A4A4A;
+    }
+
+    .footer {
+      width: 100%;
+      background-color: black;
+      Margin: 0 auto;
+      color: #FFF;
+      font-size: 10px;
+    }
+
+    .footer a {
+      color: white;
+    }
+
+    .footer img {
+      max-width: 135px;
+      Margin: 0 auto;
+      display: block;
+      padding: 4% 0 1% 0;
+    }
+
+    p.footer {
+      text-align: center;
+      color: #FFF !important;
+      line-height: 30px;
+      padding-bottom: 4%;
+      text-transform: uppercase;
+    }
+
+
+    .headers {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    /*--- Media Queries --*/
+    @media screen and (max-width: 400px) {
+      body {
+        text-align: center !important;
+
+      }
+
+      .h1 {
+        font-size: 22px;
+      }
+
+      .callToAction .column,
+      .gb-column .column {
+        max-width: 100% !important;
+      }
+
+      .callToAction img {
+        width: 100% !important;
+      }
+
+      .gb-column img {
+        max-width: 60% !important;
+      }
+    }
+
+    @media screen and (min-width: 401px) and (max-width: 400px) {
+      body {
+        text-align: center !important;
+      }
+
+      .callToAction .column {
+        max-width: 50% !important;
+      }
+
+      .gb-column .column {
+        max-width: 33% !important;
+      }
+    }
+
+    @media screen and (max-width:768px) {
+      body {
+        text-align: center !important;
+      }
+
+      img.logo {
+        float: none !important;
+        margin-left: 0% !important;
+        max-width: 200px !important;
+      }
+
+      .callToAction .section {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .callToAction img {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      img.img-responsive {
+        width: 20% !important;
+        height: auto !important;
+        max-width: 20% !important;
+      }
+
+      .content {
+        width: 100%;
+        padding-top: 0px !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- HERO TABLE -->
+    <table class="hero">
+      <tr>
+        <td><img src="./images/logos/Business_Insider_Intelligence_WIDE_WHITE_OnDark.png" class="logo"></td>
+      </tr>
+      <tr>
+        <td>
+          <h2>Welcome to the <br /> Business Insider Intelligence Daily</h2>
+        </td>
+      </tr>
+      <tr>
+        <td><span>You've made a <i>great decision</i> for yourself and
+            your company by taking
+            the first step to unlocking a wealth of content on digitial transformation across
+            industries.</span>
+        </td>
+      </tr>
+    </table>
+
+    <!-- MAIN CONTENT -->
+
+    <!--  start graphic + copy -->
+    <div class="wrapper-inner">
+      <table class="mainTable">
+        <tr>
+          <td class="intro">
+            <div class="section">
+              <table width="100%">
+                <tr>
+                  <td class="sub-td">
+                    <table class="content">
+                      <tr>
+                        <td>
+                          <img src="images/graphic.jpg">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="section">
+              <table width="100%">
+                <tr>
+                  <td class="sub-td">
+                    <table class="content">
+                      <tr>
+                        <td class="text">
+                          <p>Business Insider Inteligence Daily is a free newsleter
+                            highlighting topics the Business Insider Inteligence research
+                            team finds interesting.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+
+      <!-- start three column grey box -->
+      <div class="box">
+        <table class="grayBox">
+          <tr>
+            <td><span class="headers">Here's how it works:</span></td>
+          </tr>
+          <tr>
+            <td class="gb-column">
+
+              <div class="section">
+                <table width="100%">
+                  <tr>
+                    <td class="sub-td">
+                      <table class="content">
+                        <tr>
+                          <td>
+                            <img src="images/icons/icon-1.png">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text">
+                            <p>Get our newsletter every weekday at 5PM ET</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="section">
+                <table width="100%">
+                  <tr>
+                    <td class="sub-td">
+                      <table class="content">
+                        <tr>
+                          <td>
+                            <img src="images/icons/icon-2.png">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text">
+                            <p>Read the latest industry highlights and in-depth data
+                              analysis
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="section">
+                <table width="100%">
+                  <tr>
+                    <td class="sub-td">
+                      <table class="content">
+                        <tr>
+                          <td>
+                            <img src="images/icons/icon-3.png">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text">
+                            <p>Like it? Share the smarts with your team</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- start copy section -->
+      <table class="mainTable">
+        <tr>
+          <td>
+            <table width="100%">
+              <tr>
+                <td class="bottom">
+                  <p class="h1">Miss one of our updates during the week?</p>
+                  <span>No sweat-we'll recap the highlights for you every Saturday morning.</span>
+                  <p class="h1">One small request before we get started:</p>
+                  <span>Be sure to <a href="#" style="color: blue;">add</a><strong>
+                      newsletter@businessinsider.com</strong>
+                    to
+                    your email contacts to make sure you never miss an update!</span>
+                  <p class="h1">And that's it!</p>
+                  <span>We'll see you in your inbox soon!</span>
+                </td>
+              </tr>
+            </table>
+            <br><br>
+          </td>
+        </tr>
+      </table>
+
+      <!-- start call to actions -->
+      <!-- row 1 - social media -->
+
+      <div class="box">
+        <table class="grayBox">
+          <tr>
+            <td><span class="headers">In the meantime, take a look around:</span></td>
+          </tr>
+          <tr>
+            <td class="callToAction">
+              <div class="section">
+                <table width="100%">
+                  <tr>
+                    <td class="sub-td">
+                      <table class="content">
+                        <tr>
+                          <td>
+                            <img src="./images/icons/icon-twitter.png" class="img-responsive">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text">
+                            <a href="#">
+                              <p>Follow us on <strong>Twitter</strong></p>
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--- End First Column of Two Columns -->
+              <div class="section">
+                <table width="100%">
+                  <tr>
+                    <td class="sub-td">
+                      <table class="content">
+                        <tr>
+                          <td>
+                            <img src="./images/icons/icon-linkedin.png" class="img-responsive">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text">
+                            <a href="#">
+                              <p>Connect on <strong>LinkedIn</strong></p>
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--- End Second Column of Two Columns -->
+            </td>
+          </tr>
+          <!-- row 2 - bii content -->
+          <tr>
+            <td class="callToAction">
+              <div class="section">
+                <table width="100%">
+                  <tr>
+                    <td class="sub-td">
+                      <table class="content">
+                        <tr>
+                          <td>
+                            <img src="./images/icons/icon-4.png" class="img-responsive">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text">
+                            <a href="#">
+                              <p>Browse our <strong>Reports</strong></p>
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--- End First Column of Two Columns -->
+              <div class="section">
+                <table width="100%">
+                  <tr>
+                    <td class="sub-td">
+                      <table class="content">
+                        <tr>
+                          <td>
+                            <img src="./images/icons/icon-5.png" class="img-responsive">
+                          </td>
+                        </tr>
+                        <tr>
+
+                          <td class="text">
+                            <a href="#">
+                              <p>Learn more about <strong>BII</strong></p>
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <!--- end call to actions -->
+        </table>
+
+      </div>
+      <table>
+        <tr>
+          <td><span>Did you know the Business Insider Intelligence Daily is a preview of Business Insider Intelligence?
+              <a href="#" style="color: blue; text-decoration: underline">Learn more about our Premium membership</a> to
+              unlock research reports, briefings, industry forecasts, exclusive data, and more.</span>
+          </td>
+        </tr>
+      </table>
+      <table class="bottomTable">
+        <tr>
+          <td class="intro">
+            <table width="100%">
+              <tr>
+                <td class="footer">
+                  <img src="./images/logos/Business_Insider_Intelligence_WIDE_WHITE_OnDark.png">
+                  <span>
+                    Email sent to: <a href="#">johndoe@gmail.com</a>
+                    <br>
+                    <a href="#">Manage your email preferences</a> |
+                    <a href="#">Unsubscribe</a> |
+                    <a href="#">Terms of Service</a> |
+                    <a href="#">Privacy Policy</a>
+                    <br>
+                    2019 Insider, Inc. 1 Liberty Plaza, New York, NY 10006
+                    <br><br>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>
